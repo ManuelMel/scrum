@@ -9,6 +9,7 @@ class Desafio1
     def mostrarDatos()
         subTotal = @cant.to_f*@precio.to_f
         vat = 0
+        desc = 0
 
         if(@estado == "UT")
             vat = 6.85
@@ -22,6 +23,10 @@ class Desafio1
             vat = 8.25
         end
 
+        if(subTotal>1000.0 && subTotal<= 5000.0)
+            desc = 3
+        end
+
         vatValue = vat*subTotal/100
 
 
@@ -29,7 +34,8 @@ class Desafio1
         "\nEl precio unitario ingresado es: $#{@precio}"+
         "\nEl estado ingresado es: #{@estado}"+
         "\n\nSubtotal: $#{subTotal}"+
-        "\nVAT(#{vat}%): $#{vatValue}"
+        "\nVAT(#{vat}%): $#{vatValue}"+
+        "\nDescuento(#{desc}%)"
     end
 
 end
