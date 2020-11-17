@@ -7,10 +7,11 @@ class Desafio1
     end
     
     def mostrarDatos()
-        
-        return "La cantidad ingresada es: ##{@cant}"+
+        subTotal = @cant.to_f*@precio.to_f
+        return "\nLa cantidad ingresada es: ##{@cant}"+
         "\nEl precio unitario ingresado es: $#{@precio}"+
-        "\nEl estado ingresado es: #{@estado}"
+        "\nEl estado ingresado es: #{@estado}"+
+        "\n\nSubtotal: #{subTotal}"
     end
 
 end
