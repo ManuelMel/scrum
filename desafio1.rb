@@ -35,8 +35,9 @@ class Desafio1
             desc = 15
         end
 
-        vatValue = vat*subTotal/100
         descValue = desc*subTotal/100
+        subTotal -= descValue
+        vatValue = vat*subTotal/100
         total = subTotal+vatValue
 
 
@@ -44,8 +45,8 @@ class Desafio1
         "\nEl precio unitario ingresado es: $#{@precio}"+
         "\nEl estado ingresado es: #{@estado}"+
         "\n\nSubtotal: $#{subTotal}"+
-        "\nVAT(#{vat}%): $#{vatValue}"+
         "\nDescuento(#{desc}%): $#{descValue}"+
+        "\nVAT(#{vat}%): $#{vatValue}"+
         "\n\nTotal: $#{total}"+
         "\n\n"
     end
