@@ -16,6 +16,8 @@ class Desafio1
             vat = 8
         elsif(@estado == "TX")
             vat = 6.25
+        elsif(@estado == "AL")
+            vat = 4
         else
         
         end
