@@ -36,6 +36,7 @@ class Desafio1
         end
 
         vatValue = vat*subTotal/100
+        descValue = desc*subTotal/100
 
 
         return "\nLa cantidad ingresada es: ##{@cant}"+
@@ -43,7 +44,7 @@ class Desafio1
         "\nEl estado ingresado es: #{@estado}"+
         "\n\nSubtotal: $#{subTotal}"+
         "\nVAT(#{vat}%): $#{vatValue}"+
-        "\nDescuento(#{desc}%)"
+        "\nDescuento(#{desc}%): $#{descValue}"
     end
 
 end
