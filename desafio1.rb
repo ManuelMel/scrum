@@ -27,6 +27,8 @@ class Desafio1
             desc = 3
         elsif(subTotal>5000.0 && subTotal<= 7000.0)
             desc = 5
+        elsif(subTotal>7000.0 && subTotal<= 10000.0)
+            desc = 7
         end
 
         vatValue = vat*subTotal/100
