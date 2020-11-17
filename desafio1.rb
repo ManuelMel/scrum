@@ -22,12 +22,14 @@ class Desafio1
             vat = 8.25
         end
 
+        vatValue = vat*100/subTotal
+
 
         return "\nLa cantidad ingresada es: ##{@cant}"+
         "\nEl precio unitario ingresado es: $#{@precio}"+
         "\nEl estado ingresado es: #{@estado}"+
         "\n\nSubtotal: #{subTotal}"+
-        "\nVAT(#{vat}%)"
+        "\nVAT(#{vat}%): #{vatValue}"
     end
 
 end
