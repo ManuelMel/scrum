@@ -16,15 +16,15 @@ class Desafio1
             vat = 0
             desc = 0
 
-            if(@estado == "UT")
+            if(@estado.upcase == "UT")
                 vat = 6.85
-            elsif(@estado == "NV")
+            elsif(@estado.upcase == "NV")
                 vat = 8
-            elsif(@estado == "TX")
+            elsif(@estado.upcase == "TX")
                 vat = 6.25
-            elsif(@estado == "AL")
+            elsif(@estado.upcase == "AL")
                 vat = 4
-            elsif(@estado == "CA")
+            elsif(@estado.upcase == "CA")
                 vat = 8.25
             else
                 vat = "X"
@@ -53,7 +53,7 @@ class Desafio1
 
                 return "\nLa cantidad ingresada es: ##{@cant}"+
                 "\nEl precio unitario ingresado es: $#{@precio}"+
-                "\nEl estado ingresado es: #{@estado}"+
+                "\nEl estado ingresado es: #{@estado.upcase}"+
                 "\n\nSubtotal: $#{subTotal}"+
                 "\nDescuento(#{desc}%): $#{descValue}"+
                 "\nVAT(#{vat}%): $#{vatValue}"+
