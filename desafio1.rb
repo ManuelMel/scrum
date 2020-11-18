@@ -12,6 +12,15 @@ class Desafio1
             "\n//ruby desafio1.rb <cantidad> <precio unitario> <estado>//"+
             "\n\n"
         else
+            validarDato1 = Float(@cant) rescue false
+            validarDato2 = Float(@precio) rescue false
+
+            if(validarDato1 == false || validarDato2 == false)
+                return "\n¡Ingresa un número válido para el parámetro Cantidad y Precio!"+
+                "\n//ruby desafio1.rb <cantidad> <precio unitario> <estado>//"+
+                "\n\n"
+            end
+
             subTotal = @cant.to_f*@precio.to_f
             vat = 0
             desc = 0
@@ -31,7 +40,8 @@ class Desafio1
             end
 
             if(vat == "X")
-                return "¡#{@estado} no es un estado válido, ingresa UT, NV, TX, AL ó CA!"
+                return "\n¡#{@estado} no es un estado válido, ingresa UT, NV, TX, AL ó CA!"+
+                "\n\n"
             else
 
                 if(subTotal>1000.0 && subTotal<= 5000.0)
@@ -64,5 +74,5 @@ class Desafio1
     end
 end
 
-kleer_bot = Desafio1.new(ARGV[0],ARGV[1],ARGV[2])
-puts kleer_bot.mostrarDatos()
+desafio1 = Desafio1.new(ARGV[0],ARGV[1],ARGV[2])
+puts desafio1.mostrarDatos()
